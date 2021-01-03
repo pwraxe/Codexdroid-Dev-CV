@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jem.liquidswipe.layout.LiquidSwipeConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/id_lottieStartPage1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_cacheComposition="true"
+        app:lottie_enableMergePathsForKitKatAndAbove="true"
+        app:lottie_loop="true"
+        app:lottie_renderMode="automatic"
+        app:lottie_repeatMode="reverse" />
+
+
+    <Button
+        android:id="@+id/id_letsGoButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_20_dp"
+        android:background="@drawable/button_back"
+        android:fontFamily="sans-serif-thin"
+        android:padding="@dimen/size_20_dp"
+        android:text="Lets Go"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_16_dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_lottieStartPage1" />
+
+    <TextView
+        android:id="@+id/id_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/hello_world"
+        android:textSize="50sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/id_lottieStartPage1"
+        app:layout_constraintTop_toBottomOf="@+id/id_lottieStartPage1" />
+
+    <TextView
+        android:id="@+id/id_textDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="Description"
+        android:layout_marginTop="@dimen/size_16_dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_25_sp"
+        app:layout_constraintStart_toStartOf="@+id/id_textView"
+        app:layout_constraintTop_toBottomOf="@+id/id_textView" />
+
+    <TextView
+        android:id="@+id/id_pageCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="0/0"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/id_skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="Skip"
+        android:elevation="@dimen/size_20_dp"
+        android:background="@drawable/skip_back"
+        android:layout_margin="@dimen/size_6_dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</com.jem.liquidswipe.layout.LiquidSwipeConstraintLayout>

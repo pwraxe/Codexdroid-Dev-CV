@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Codexdroid Dev CV</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello World</string>
+    <string name="welcome">Welcome</string>
+    <string name="education">Education</string>
+    <string name="activities">Activities</string>
+    <string name="projects">Projects</string>
+    <string name="codexdroid">CodeXDroid</string>
+    <string name="welcome2cv">Welcome to my CV 😊</string>
+    <string name="education_desc">What\'s my Education Journey?</string>
+    <string name="activity_desc">What Activities I do?</string>
+    <string name="project_desc">What\'s my Student Level Projects?</string>
+    <string name="my_brand_desc">My own brand 🤟</string>
+
+    <string name="myDesc">I have a passion for app development,
+        I like to work with the latest technology like kotlin,
+        I see the problem by next stage because it teach me a lot of thing to move ahead.</string>
+    <string name="my_name">Akshay S. Pawar</string>
+    <string name="interest">Interest</string>
+    <string name="language">Language</string>
+    <string name="contact_me">Contact Me</string>
+    <string name="social_media">Social Media</string>
+    <string name="experience">Experience</string>
+    <string name="technical_skill">Technical SKill</string>
+    <string name="certificate">Certificate</string>
+    <string name="virtual_space">Virtual Space</string>
+    <string name="copyrights">Copyrights</string>
+    <string name="comment">Comment</string>
+    <string name="share">Share</string>
+    <string name="about_me">About Me</string>
+    <string name="about_desc">Finding errors, bugs &amp; Exception to learn more.</string>
+    <string name="dev_email">developer.codexdroid@gmail.com</string>
+    <string name="my_birth_date">10 July 1996</string>
+    <string name="my_address">MH-15 (Sinnar)</string>
+    <string name="title_activity_my_location">Map</string>
+
+    <string name="interest_music_desc">Music (Re)Fresh Minds</string>
+    <string name="interest_driving_desc">I don\'t know driving but still I like it 🤪</string>
+    <string name="interest_game_desc">Games is part of life &amp; It increase concentration</string>
+    <string name="interest_travel_desc">Explore New things, Meet new people</string>
+    <string name="interest_shopping_desc">Anything, Anywhere 😍</string>
+    <string name="icon_website">Special thanks to <b>Flat Icon</b>
+        <br/> to giving a chance to use there icon for free</string>
+    <string name="close_drawer">close</string>
+    <string name="open_drawer">open</string>
+
+    <string name="message">Hello Akshay, I just viewed your CV :)</string>
+
+    <string name="flat_thanks">Special thanks to <b>FLAT ICON</b> for free Icons</string>
+
+
+</resources>

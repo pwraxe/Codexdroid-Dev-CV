@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_container"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.HomeActivity">
+
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:id="@+id/id_arcView"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:elevation="4dp"
+            app:shape_arc_height="50dp"
+            app:shape_arc_position="bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <nl.dionsegijn.konfetti.KonfettiView
+                android:id="@+id/id_konfettiView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blue" />
+
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <com.rolud.solidglowanimation.SolidGlowAnimation
+            android:id="@+id/id_glowAnim"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#00ffffff"
+            android:translationZ="4dp"
+
+            app:layers="3"
+            app:color1="#000080"
+            app:color2="#0000ff"
+            app:color3="#1E90FF"
+            app:duration="1000"
+            app:scaleMax="1.5"
+            android:radius="100dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/id_arcView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_arcView">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/id_profilePic"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/my_png_pic1"
+                app:civ_shadow_color="@color/dark_blue"
+                android:scaleType="fitCenter"
+                android:elevation="@dimen/size_20_dp"
+                />
+        </com.rolud.solidglowanimation.SolidGlowAnimation>
+
+        <com.rolud.solidglowanimation.SolidGlowAnimation
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#00ffffff"
+            android:translationZ="4dp"
+
+            app:layers="3"
+            app:color1="#000080"
+            app:color2="#0000ff"
+            app:color3="#1E90FF"
+            app:duration="1000"
+            app:scaleMax="1.5"
+            android:radius="100dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/id_arcView"
+            app:layout_constraintTop_toBottomOf="@+id/id_arcView">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_lottie_error_404"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                app:lottie_rawRes="@raw/error_404"
+                app:lottie_repeatMode="reverse"
+                app:lottie_renderMode="automatic"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:visibility="gone"
+                app:lottie_enableMergePathsForKitKatAndAbove="true"
+                app:lottie_cacheComposition="true"
+                />
+
+
+
+        </com.rolud.solidglowanimation.SolidGlowAnimation>
+
+
+        <TextView
+            android:id="@+id/id_myName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cinzel"
+            android:gravity="center"
+            android:text="@string/my_name"
+            android:textColor="@color/dark_blue"
+            android:textSize="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_glowAnim" />
+
+        <TextView
+            android:id="@+id/id_myPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poiret_one"
+            android:text="Jr. Android Developer"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/text_size_20_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_myName" />
+
+        <TextView
+            android:id="@+id/id_myDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myDesc"
+            android:fontFamily="@font/poiret_one"
+            android:layout_gravity="center_horizontal"
+            android:justificationMode="inter_word"
+            android:layout_margin="@dimen/size_20_dp"
+            android:padding="@dimen/size_20_dp"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_myPosition" />
+
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/id_bottomContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/size_6_dp"
+            android:layout_marginEnd="@dimen/size_6_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_glowAnim">
+
+<!--
+app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:behavior_hideable="false"
+                app:behavior_peekHeight="0dp"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+                android:id="@+id/id_constrain_bottomSheet"
+                android:background="@drawable/bottom_sheet_bg">
+
+<!--                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"-->
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+
+                    android:id="@+id/id_myCircularPic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="end"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/my_pic2"
+                    android:translationY="@dimen/size_6_dp"
+
+                    app:civ_border="true"
+                    app:civ_border_width="@dimen/size_6_dp"
+                    app:civ_shadow_color="@color/dark_blue"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@+id/guideline18" />
+
+                <TextView
+                    android:id="@+id/myName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/cinzel"
+                    android:text="@string/my_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_25_sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                    app:layout_constraintStart_toEndOf="@+id/id_myCircularPic"
+                    app:layout_constraintTop_toTopOf="@+id/guideline18" />
+
+
+                <TextView
+                    android:id="@+id/my_birth_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poiret_one"
+                    android:text="@string/my_birth_date"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_16_sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="@dimen/size_20_dp"
+                    android:layout_height="@dimen/size_20_dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_born"
+                    app:layout_constraintStart_toStartOf="@+id/myName"
+                    app:layout_constraintTop_toBottomOf="@+id/myName" />
+
+                <ImageView
+                    android:id="@+id/id_locationImage"
+                    android:layout_width="@dimen/size_20_dp"
+                    android:layout_height="@dimen/size_20_dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                    app:layout_constraintStart_toStartOf="@+id/imageView4"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+                <TextView
+                    android:id="@+id/id_myAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poiret_one"
+                    android:text="@string/my_address"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_16_sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/id_locationImage"
+                    app:layout_constraintStart_toEndOf="@+id/id_locationImage"
+                    app:layout_constraintTop_toTopOf="@+id/id_locationImage" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="@dimen/size_20_dp"
+                    android:layout_height="@dimen/size_20_dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_email_white"
+                    app:layout_constraintEnd_toEndOf="@+id/id_myCircularPic"
+                    app:layout_constraintStart_toStartOf="@+id/id_myCircularPic"
+                    app:layout_constraintTop_toBottomOf="@+id/id_myCircularPic" />
+
+                <TextView
+                    android:id="@+id/id_dev_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poiret_one"
+                    android:text="@string/dev_email"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_16_sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/id_magicLottie"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/id_dev_email"
+                    app:lottie_autoPlay="true"
+                    app:lottie_cacheComposition="true"
+                    app:lottie_enableMergePathsForKitKatAndAbove="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/magic"
+                    app:lottie_renderMode="automatic"
+                    app:lottie_repeatMode="reverse" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="20dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="20dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="20dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transperent"
+            android:elevation="@dimen/size_8_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/particleView"
+            app:layout_constraintTop_toTopOf="@+id/particleView"
+            app:navigationIcon="@drawable/ic_back_button" />
+
+        <me.ibrahimsn.particle.ParticleView
+            android:id="@+id/particleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:particleColor="@android:color/holo_green_dark"
+            app:particleCount="60"
+            app:particleLineColor="@android:color/holo_green_dark"
+            app:particleLinesEnabled="true"
+            app:particleMaxRadius="10"
+            app:particleMinRadius="3"
+            app:particlesBackgroundColor="#000" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_16_dp"
+            android:fontFamily="@font/cambay_bold"
+            android:text="Special Thanks to"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/id_flatIconLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cambay_bold"
+            android:text="https://www.flaticon.com"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poiret_one"
+            android:text="Disclaimer: Most of Icons in this app are from flaticon site"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_flatIconLink" />
+
+        <View
+            android:id="@+id/view13"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:elevation="@dimen/size_16_dp"
+            android:layout_marginTop="@dimen/size_20_dp"
+            android:layout_marginBottom="@dimen/size_20_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view13">
+
+
+            <include
+                android:id="@+id/id_copyrightLayout"
+                layout="@layout/layout_copyright" />
+
+
+            <include
+                android:id="@+id/privacyLayout"
+                layout="@layout/layout_tc"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/size_8_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:singleSelection="true">
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/id_copyrightChip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:fontFamily="@font/cinzel"
+                    android:padding="20dp"
+                    android:text="Privacy"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_20_sp"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:chipBackgroundColor="@drawable/chip_english_selector"
+                    app:chipStrokeColor="@color/colorPrimary"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/id_privacyChip"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:fontFamily="@font/cinzel"
+                    android:text="Copyrights &amp; TC"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_20_sp"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:chipBackgroundColor="@drawable/chip_english_selector"
+                    app:chipStrokeColor="@color/colorPrimary"
+                    app:chipStrokeWidth="1dp" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

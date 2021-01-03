@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "489714161635",
+    "firebase_url": "https://codexdroid-dev-cv.firebaseio.com",
+    "project_id": "codexdroid-dev-cv",
+    "storage_bucket": "codexdroid-dev-cv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489714161635:android:337730e70780e28b3df2d6",
+        "android_client_info": {
+          "package_name": "com.codexdroid.codexdroiddevcv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489714161635-cauljqp3e4vnh6u7p410sc0kj77d2qog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc5sTaLQRszR3shGpCHplx-kE1o4HxW3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489714161635-cauljqp3e4vnh6u7p410sc0kj77d2qog.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

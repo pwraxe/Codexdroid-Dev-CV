@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transperent"
+            android:elevation="@dimen/size_8_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/particleView"
+            app:layout_constraintTop_toTopOf="@+id/particleView"
+            app:navigationIcon="@drawable/ic_back_button" />
+
+        <me.ibrahimsn.particle.ParticleView
+            android:id="@+id/particleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:particleColor="@android:color/holo_green_dark"
+            app:particleCount="60"
+            app:particleLineColor="@android:color/holo_green_dark"
+            app:particleLinesEnabled="true"
+            app:particleMaxRadius="10"
+            app:particleMinRadius="3"
+            app:particlesBackgroundColor="#000" />
+
+
+        <com.hitomi.cmlibrary.CircleMenu
+            android:id="@+id/id_circularMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintBottom_toBottomOf="@+id/particleView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/id_socialMenu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:fabCustomSize="@dimen/size_80_dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:src="@drawable/ic_menu"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/id_githubMenu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="64dp"-->
+<!--            android:src="@drawable/img_github"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/id_socialMenu"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_socialMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_socialMenu" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/id_InstaMenu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="48dp"-->
+<!--            android:layout_marginBottom="48dp"-->
+<!--            android:src="@drawable/img_insta"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/id_linkedInMenu"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/id_githubMenu" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/id_linkedInMenu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="64dp"-->
+<!--            android:src="@drawable/img_linked_in"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_socialMenu"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/id_socialMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_socialMenu" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/id_whatsAppMenu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="48dp"-->
+<!--            android:layout_marginTop="48dp"-->
+<!--            android:src="@drawable/ic_whatsapp"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/id_emailMenu"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/id_linkedInMenu" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/id_facebookMenu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="48dp"-->
+<!--            android:layout_marginEnd="48dp"-->
+<!--            android:src="@drawable/img_fb"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/id_emailMenu"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/id_twitterMenu" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/id_twitterMenu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="64dp"-->
+<!--            android:src="@drawable/img_twitter"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_socialMenu"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/id_socialMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_socialMenu" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/id_telegramMenu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="48dp"-->
+<!--            android:layout_marginBottom="48dp"-->
+<!--            android:src="@drawable/ic_telegram"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/id_twitterMenu"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/id_githubMenu" />-->
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/id_emailMenu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="64dp"-->
+<!--            android:src="@drawable/ic_email"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_socialMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_socialMenu"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/id_socialMenu" />-->
+
+
+<!--        <com.app.progresviews.ProgressWheel-->
+<!--            android:id="@+id/id_gitRing"-->
+<!--            android:layout_width="68dp"-->
+<!--            android:layout_height="68dp"-->
+<!--            app:barWidth="5dp"-->
+<!--            app:countText=""-->
+<!--            app:countTextColor="@color/white"-->
+<!--            app:countTextSize="16sp"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_githubMenu"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_githubMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_githubMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_githubMenu"-->
+<!--            app:percentage="360"-->
+<!--            app:progressColor="@color/white"-->
+<!--            app:rimColor="@color/transperent" />-->
+
+<!--        <com.app.progresviews.ProgressWheel-->
+<!--            android:id="@+id/id_instaRing"-->
+<!--            android:layout_width="68dp"-->
+<!--            android:layout_height="68dp"-->
+<!--            app:barWidth="5dp"-->
+<!--            app:countText=""-->
+<!--            android:visibility="gone"-->
+<!--            app:countTextColor="@color/white"-->
+<!--            app:countTextSize="16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_InstaMenu"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_InstaMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_InstaMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_InstaMenu"-->
+<!--            app:percentage="360"-->
+<!--            app:progressColor="@color/white"-->
+<!--            app:rimColor="@color/transperent" />-->
+
+<!--        <com.app.progresviews.ProgressWheel-->
+<!--            android:id="@+id/id_linkedInRing"-->
+<!--            android:layout_width="68dp"-->
+<!--            android:layout_height="68dp"-->
+<!--            app:barWidth="5dp"-->
+<!--            app:countText=""-->
+<!--            app:countTextColor="@color/white"-->
+<!--            app:countTextSize="16sp"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_linkedInMenu"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_linkedInMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_linkedInMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_linkedInMenu"-->
+<!--            app:percentage="360"-->
+<!--            app:progressColor="@color/white"-->
+<!--            app:rimColor="@color/transperent" />-->
+
+<!--        <com.app.progresviews.ProgressWheel-->
+<!--            android:id="@+id/id_whatsAppRing"-->
+<!--            android:layout_width="68dp"-->
+<!--            android:layout_height="68dp"-->
+<!--            app:barWidth="5dp"-->
+<!--            app:countText=""-->
+<!--            app:countTextColor="@color/white"-->
+<!--            app:countTextSize="16sp"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_whatsAppMenu"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_whatsAppMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_whatsAppMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_whatsAppMenu"-->
+<!--            app:percentage="360"-->
+<!--            app:progressColor="@color/white"-->
+<!--            app:rimColor="@color/transperent" />-->
+
+<!--        <com.app.progresviews.ProgressWheel-->
+<!--            android:id="@+id/id_emailRing"-->
+<!--            android:layout_width="68dp"-->
+<!--            android:layout_height="68dp"-->
+<!--            app:barWidth="5dp"-->
+<!--            app:countText=""-->
+<!--            app:countTextColor="@color/white"-->
+<!--            app:countTextSize="16sp"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_emailMenu"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_emailMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_emailMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_emailMenu"-->
+<!--            app:percentage="360"-->
+<!--            app:progressColor="@color/white"-->
+<!--            app:rimColor="@color/transperent" />-->
+
+<!--        <com.app.progresviews.ProgressWheel-->
+<!--            android:id="@+id/id_facebookRing"-->
+<!--            android:layout_width="68dp"-->
+<!--            android:layout_height="68dp"-->
+<!--            app:barWidth="5dp"-->
+<!--            app:countText=""-->
+<!--            app:countTextColor="@color/white"-->
+<!--            app:countTextSize="16sp"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_facebookMenu"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_facebookMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_facebookMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_facebookMenu"-->
+<!--            app:percentage="360"-->
+<!--            app:progressColor="@color/white"-->
+<!--            app:rimColor="@color/transperent" />-->
+
+<!--        <com.app.progresviews.ProgressWheel-->
+<!--            android:id="@+id/id_twitterRing"-->
+<!--            android:layout_width="68dp"-->
+<!--            android:layout_height="68dp"-->
+<!--            app:barWidth="5dp"-->
+<!--            app:countText=""-->
+<!--            app:countTextColor="@color/white"-->
+<!--            app:countTextSize="16sp"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_twitterMenu"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_twitterMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_twitterMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_twitterMenu"-->
+<!--            app:percentage="360"-->
+<!--            app:progressColor="@color/white"-->
+<!--            app:rimColor="@color/transperent" />-->
+
+<!--        <com.app.progresviews.ProgressWheel-->
+<!--            android:id="@+id/id_telegramRing"-->
+<!--            android:layout_width="68dp"-->
+<!--            android:layout_height="68dp"-->
+<!--            app:barWidth="5dp"-->
+<!--            app:countText=""-->
+<!--            app:countTextColor="@color/white"-->
+<!--            app:countTextSize="16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/id_telegramMenu"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/id_telegramMenu"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/id_telegramMenu"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/id_telegramMenu"-->
+<!--            app:percentage="360"-->
+<!--            app:progressColor="@color/white"-->
+<!--            app:rimColor="@color/transperent" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<com.app.progresviews.ProgressWheel-->
+<!--android:id="@+id/id_telegramRing"-->
+<!--android:layout_width="180dp"-->
+<!--android:layout_height="180dp"-->
+<!--app:barWidth="16dp"-->
+<!--app:countText=""-->
+<!--app:countTextColor="@color/white"-->
+<!--app:countTextSize="16sp"-->
+<!--app:percentage="360"-->
+<!--app:progressColor="@color/colorPrimary"-->
+<!--app:rimColor="@color/transperent"-->
+<!--tools:layout_editor_absoluteX="215dp"-->
+<!--tools:layout_editor_absoluteY="456dp" />-->

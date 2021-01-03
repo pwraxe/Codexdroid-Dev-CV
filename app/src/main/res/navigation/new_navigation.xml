@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_interestFragment"
+            app:destination="@id/interestFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_languageFragment"
+            app:destination="@id/languageFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_socialMediaFragment"
+            app:destination="@id/socialMediaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_copyrightFragment"
+            app:destination="@id/copyrightFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_experienceFragment"
+            app:destination="@id/experienceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_projectsFragment"
+            app:destination="@id/projectsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_certificatesFragment"
+            app:destination="@id/certificatesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_virtualSpaceFragment"
+            app:destination="@id/virtualSpaceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_technicalSkillFragment"
+            app:destination="@id/technicalSkillFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_educationFragment"
+            app:destination="@id/educationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interestFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.InterestFragment"
+        android:label="InterestFragment" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.LanguageFragment"
+        android:label="LanguageFragment"
+        tools:layout="@layout/fragment_language"/>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about"
+        />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.ContactFragment"
+        android:label="ContactFragment"
+        tools:layout="@layout/fragment_contact"
+        />
+    <fragment
+        android:id="@+id/socialMediaFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.SocialMediaFragment"
+        android:label="SocialMediaFragment"
+        tools:layout="@layout/fragment_social_media"
+        />
+    <fragment
+        android:id="@+id/copyrightFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.CopyrightFragment"
+        android:label="CopyrightFragment"
+        tools:layout="@layout/layout_copyright"
+        />
+    <fragment
+        android:id="@+id/educationFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.EducationFragment"
+        android:label="EducationFragment"
+        tools:layout="@layout/fragment_education"
+        />
+    <fragment
+        android:id="@+id/technicalSkillFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.TechnicalSkillFragment"
+        android:label="TechnicalSkillFragment"
+        tools:layout="@layout/fragment_technical_skill"
+        />
+    <fragment
+        android:id="@+id/virtualSpaceFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.VirtualSpaceFragment"
+        android:label="VirtualSpaceFragment"
+        tools:layout="@layout/fragment_virtual_space"
+        />
+    <fragment
+        android:id="@+id/certificatesFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.CertificatesFragment"
+        android:label="CertificatesFragment"
+        tools:layout="@layout/fragment_certificates"
+        />
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.ProjectsFragment"
+        android:label="ProjectsFragment"
+        tools:layout="@layout/fragment_projects"
+        >
+        <action
+            android:id="@+id/action_projectsFragment_to_screenShotListFragment"
+            app:destination="@id/screenShotListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/experienceFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.ExperienceFragment"
+        android:label="ExperienceFragment"
+        tools:layout="@layout/fragment_experience"
+        />
+    <fragment
+        android:id="@+id/screenShotListFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.ScreenShotListFragment"
+        android:label="ScreenShotListFragment"
+        tools:layout="@layout/fragment_screen_shot_list"
+        >
+        <action
+            android:id="@+id/action_screenShotListFragment_to_viewFullImageFragment"
+            app:destination="@id/viewFullImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFullImageFragment"
+        android:name="com.codexdroid.codexdroiddevcv.fragments.ViewFullImageFragment"
+        android:label="ViewFullImageFragment"
+        tools:layout="@layout/fragment_view_full_image">
+    </fragment>
+
+
+</navigation>

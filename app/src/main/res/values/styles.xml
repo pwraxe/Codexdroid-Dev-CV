@@ -1,0 +1,44 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="fullScreenStyle" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="backgroundColor">@color/white</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal" >
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog" >
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="editTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <item name="colorControlNormal">@color/dark_blue</item>
+        <item name="colorControlActivated">@android:color/holo_orange_light</item>
+        <item name="theme">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+    </style>
+
+
+    <style name="style_copyright">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/poiret_one</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">@dimen/size_8_dp</item>
+        <item name="android:layout_marginStart">@dimen/size_20_dp</item>
+        <item name="android:layout_marginEnd">@dimen/size_20_dp</item>
+    </style>
+
+</resources>
